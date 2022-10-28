@@ -2,7 +2,41 @@
 
 通过ASM+Tranform插桩View.OnClickListener完成页面元素点击监听
 
+支持注入三种方式实现View.OnClickListener协议:
 
+*   lamda实现的
+
+    >   ```
+    >   findViewById(R.id.tv_lambda).setOnClickListener(v->{
+    >       
+    >   });
+    >   ```
+
+*   layout binding
+
+    >   ```
+    >   <TextView
+    >       android:layout_width="wrap_content"
+    >       android:layout_height="wrap_content"
+    >       android:text="binding listener"
+    >       app:layout_constraintBottom_toBottomOf="parent"
+    >       app:layout_constraintLeft_toLeftOf="parent"
+    >       app:layout_constraintRight_toRightOf="parent"
+    >       app:layout_constraintTop_toTopOf="@id/tv_btn"
+    >       android:onClick="toSecond"
+    >       />
+    >   ```
+
+*   object
+
+    >   ```
+    >   findViewById(R.id.tv_btn).setOnClickListener(new View.OnClickListener(){
+    >       @Override
+    >       public void onClick(View view) {
+    >           
+    >       }
+    >   });
+    >   ```
 
 # 使用说明
 
