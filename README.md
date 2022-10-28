@@ -127,3 +127,18 @@ SPMTrack.sharedInstance().subscribe(this);
 ```
 SPMTrack.sharedInstance().unsubscribe(this);
 ```
+
+## Demo
+
+```
+public class SPMClickAspect implements SPMTrack.OnTrackListener{
+    SPMClickAspect() {
+        SPMTrack.sharedInstance().subscribe(this);
+    }
+
+    @Override
+    public void onTrackClick(View view) {
+        Log.i("ASMTrack", "spm subscribe notify, view click:"+view);
+    }
+}
+```
