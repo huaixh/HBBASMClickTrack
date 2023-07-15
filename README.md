@@ -137,8 +137,15 @@ public class SPMClickAspect implements SPMTrack.OnTrackListener{
     }
 
     @Override
-    public void onTrackClick(View view) {
-        Log.i("ASMTrack", "spm subscribe notify, view click:"+view);
+    public void onViewClick(View view) {
+        Log.i("ASMTrack", "spm subscribe notify, view click:"+((TextView)view).getText());
+
+    }
+
+    @Override
+    public void onTabClick(TabLayout.Tab tab) {
+        Log.i("ASMTrack", "spm subscribe notify, tab on select:"+tab.getText());
+
     }
 }
 ```
