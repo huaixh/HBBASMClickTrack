@@ -1,6 +1,6 @@
 # HBBASMClickTrack
 
-通过ASM+Tranform插桩View.OnClickListener完成页面元素点击监听
+通过ASM+Tranform插桩View.OnClickListener、TabLayout.onTabSelected 完成页面元素点击监听
 
 支持注入三种方式实现View.OnClickListener协议:
 
